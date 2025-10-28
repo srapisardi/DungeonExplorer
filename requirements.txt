@@ -1,0 +1,22 @@
+# --- Core Flask Dependencies ---
+Flask==3.0.3
+Flask-Session==0.5.0
+Flask-SQLAlchemy==3.1.1
+
+# --- Database ---
+SQLAlchemy==2.0.31
+
+# --- HTML / CSS / JS Integration ---
+Jinja2==3.1.4
+
+# --- Utility / Security ---
+itsdangerous==2.2.0
+Werkzeug==3.0.4
+
+# --- Development Tools (optional but useful) ---
+python-dotenv==1.0.1   # For environment variable management
+black==24.4.2           # Autoformatter
+pylint==3.2.6           # Linting
+
+# --- Optional: for running locally with reload ---
+waitress==3.0.1
