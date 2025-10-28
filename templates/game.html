@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dungeon Explorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- 🧮 TOP BAR -->
+    <div id="top-bar">
+        <span id="enemy-counter">🧟‍♂️ Enemies Remaining: 20 / 20</span>
+        <span id="timer">⏱️ Time: 10:00</span>
+    </div>
+
+    <div id="game-container">
+        <h1>Dungeon Explorer</h1>
+
+        <!-- 🧠 STATUS BAR -->
+        <div id="status-bar">
+            <span id="health">❤️ Health: 100</span>
+            <span id="room">🚪 Room:</span>
+            <span id="inventory-status">💼 Inventory: (empty)</span>
+        </div>
+
+        <!-- 🏁 OBJECTIVE / INTRO -->
+        <div id="objective">
+            <p>Welcome, <strong>Traveler</strong>!</p>
+            <p>Your mission is to cleanse the dungeon of evil.</p>
+            <p>There are 20 enemies lurking within. Defeat them all before time runs out!</p>
+            <p>If your health reaches zero or the timer expires, the dungeon wins...</p>
+            <p>Good luck!</p>
+        </div>
+
+        <!-- 🧾 OUTPUT TEXT AREA -->
+        <div id="output"></div>
+
+        <!-- 🎮 CONTROLS -->
+        <div id="controls">
+            <button id="start-btn" onclick="startGame()">Start Game</button>
+            <button onclick="move('north')">Go North</button>
+            <button onclick="move('south')">Go South</button>
+            <button onclick="move('east')">Go East</button>
+            <button onclick="move('west')">Go West</button>
+            <button onclick="pickup()">Pick Up</button>
+            <button onclick="heal()">Heal</button>
+            <button onclick="fight()">Fight</button>
+            <button onclick="restartGame()">Restart Game</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

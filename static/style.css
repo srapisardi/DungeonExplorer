@@ -1,0 +1,231 @@
+/* ===== GLOBAL ===== */
+body {
+  background-color: #0c0c0c;
+  color: #dcdcdc;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game-container {
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 255, 153, 0.15);
+  padding: 20px 40px;
+  width: 700px;
+  max-width: 90%;
+}
+
+/* ===== HEADER ===== */
+h1 {
+  color: #00ff99;
+  text-shadow: 0 0 8px #00ff99;
+  margin-bottom: 10px;
+}
+
+/* ===== STATUS BAR ===== */
+#status-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #111;
+  border: 1px solid #333;
+  color: #00ff99;
+  padding: 8px 16px;
+  margin: 10px 0 20px;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+#status-bar span {
+  flex: 1;
+  text-align: center;
+}
+
+#health {
+  color: #ff4444;
+  text-shadow: 0 0 6px #ff4444;
+}
+
+#room {
+  color: #ffff66;
+  text-shadow: 0 0 6px #ffff66;
+}
+
+#inventory-status {
+  color: #00ccff;
+  white-space: pre-wrap;
+  text-shadow: 0 0 6px #00ccff;
+}
+
+/* ===== OUTPUT (Game Text) ===== */
+#output {
+  background: #0f0f0f;
+  border: 1px solid #333;
+  color: #e5e5e5;
+  padding: 15px;
+  border-radius: 8px;
+  min-height: 100px;
+  text-align: left;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  overflow-y: auto;
+  font-size: 1rem;
+}
+
+/* ===== CONTROLS ===== */
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+button {
+  background-color: #222;
+  color: #00ff99;
+  border: 1px solid #00ff99;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #00ff99;
+  color: #111;
+  box-shadow: 0 0 10px #00ff99;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Restart button - standout red */
+button:last-child {
+  background-color: #661111;
+  color: #ffcccc;
+  border-color: #ff5555;
+}
+
+button:last-child:hover {
+  background-color: #ff4444;
+  color: #fff;
+  box-shadow: 0 0 10px #ff4444;
+}
+
+/* ===== INPUT (Start section) ===== */
+#start-section {
+  margin-bottom: 20px;
+}
+
+#player-name {
+  background: #111;
+  border: 1px solid #00ff99;
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: #00ff99;
+  font-family: inherit;
+  width: 180px;
+  margin-right: 8px;
+}
+
+#player-name:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00ff99;
+}
+
+button:nth-child(6) {
+  background-color: #333366;
+  border-color: #6666ff;
+}
+button:nth-child(6):hover {
+  background-color: #6666ff;
+  color: #111;
+  box-shadow: 0 0 10px #6666ff;
+}
+
+button:nth-child(7) {
+  background-color: #115511;
+  border-color: #33cc33;
+}
+
+button:nth-child(7):hover {
+  background-color: #33cc33;
+  color: #111;
+  box-shadow: 0 0 10px #33cc33;
+}
+
+#inventory-status {
+  color: #00ccff;
+  font-weight: 500;
+  white-space: pre-wrap;
+}
+
+#top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 40px; /* add margin from edges */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  color: #00ff99;
+  font-family: "Courier New", monospace;
+  font-size: 1.1em;
+  z-index: 10;
+  border-bottom: 2px solid #333;
+}
+
+#enemy-counter {
+  color: #808080;
+  text-shadow: 0 0 6px #808080;
+}
+
+#timer {
+  color: #66ccff;
+  margin-right: 80px; /* ensure spacing */
+  text-shadow: 0 0 6px #66ccff;
+}
+
+.low-time {
+  color: #ff4444 !important;
+  font-weight: bold;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#objective {
+  background-color: #111;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px auto;
+  width: 80%;
+  color: #00ff99;
+  text-align: left;
+  font-family: "Courier New", monospace;
+  font-size: 1em;
+}
+
+#objective p {
+  margin: 6px 0;
+}
+
+#controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
